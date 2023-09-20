@@ -2211,9 +2211,9 @@ type DragOptions = {
      */
     handle?: string | HTMLElement | HTMLElement[];
     /**
-     * Choose when and how to set touch action for mobile devices
+     * Choose to set the initial touch-action of an element to a different value than 'none'
      */
-    touchAction?: Property.TouchAction | Partial<Record<number, Property.TouchAction>> | ((el: HTMLElement, setTouchAction: (action: Property.TouchAction) => void) => void);
+    touchAction?: Property.TouchAction;
     /**
      * Class to apply on the element on which `use:draggable` is applied.
      * Note that if `handle` is provided, it will still apply class on the element to which this action is applied, **NOT** the handle
