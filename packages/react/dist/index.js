@@ -93,7 +93,7 @@ var draggable = (node, options = {}) => {
   } else if (typeof touchAction === "string") {
     setStyle(node, "touch-action", touchAction);
   } else {
-    const thresholds = Object.keys(touchAction).map((threshold) => Number(threshold)).sort();
+    const thresholds = Object.keys(touchAction).map((threshold) => Number(threshold)).sort((x, y) => y - x);
     setTouchAction = (threshold) => {
       const crossedThreshold = thresholds.find((value) => threshold >= value);
       if (typeof touchAction !== "object" || typeof crossedThreshold !== "number" || typeof touchAction === "object" && !(crossedThreshold in touchAction))
